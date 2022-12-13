@@ -1,14 +1,13 @@
 PuzzleInput <- read.csv(file = "puzzleinput1.csv", blank.lines.skip = FALSE)
-ElfNumber <- 1
+Elf <- 1
 Calories <- 0
 Totals <- data.frame()
 
 #Part 1
-
 for (i in 1:nrow(PuzzleInput)) {
   if (is.na(PuzzleInput[i,])) {
-    Totals <- rbind(Totals, c(ElfNumber,Calories))
-    ElfNumber <- ElfNumber + 1
+    Totals <- rbind(Totals, c(Elf,Calories))
+    Elf <- Elf + 1
     Calories <- 0
   } else {
     Calories <- Calories + PuzzleInput[i,]
