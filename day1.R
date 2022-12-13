@@ -1,4 +1,4 @@
-PuzzleInput <- read.csv(file = "puzzleinput1.csv", blank.lines.skip = FALSE, as.is = TRUE)
+PuzzleInput <- read.csv(file = "puzzleinput1.csv", blank.lines.skip = FALSE)
 ElfNumber <- 1
 Calories <- 0
 Totals <- data.frame()
