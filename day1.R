@@ -16,10 +16,14 @@ for (i in 1:nrow(PuzzleInput)) {
 colnames(Totals) <- c("Elf","Calories")
 
 #Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
-print(paste("Elf", which.max(Totals$Calories), "is carrying", max(Totals$Calories), "calories"))
+Part1Ans <- paste("Elf", which.max(Totals$Calories), "is carrying", max(Totals$Calories), "calories")
 
 #Part 2
 Totals <-Totals[order(Totals$Calories, decreasing = TRUE),]
 
 #Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
-sum(Totals$Calories[1:3])
+Part2Ans <- sum(Totals$Calories[1:3])
+
+#Answer
+paste("Part 1:", Part1Ans)
+paste("Part 2:", Part2Ans)
